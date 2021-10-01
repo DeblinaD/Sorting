@@ -31,7 +31,7 @@ int main()
     /*printing final array*/
     for(int i=0; i<n; i++)
     {
-        cout<<array[i]<<endl;
+        cout<<array[i]<<" ";
     }
 
     return 0;
