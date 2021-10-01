@@ -20,6 +20,11 @@ int binarysearch(int arr[], int n, int key)
         {
             start= mid+1; 
         }
+    for(int i=start; i<=end; i++)
+    {
+        if(arr[i]==key)
+        return (i+1);
+    }
     }
     return -1;  /*this means while loop ended but key not found*/
 }
@@ -27,13 +32,18 @@ int binarysearch(int arr[], int n, int key)
 int main()
 {
     int n, element;
-    cin>>n>>element;
+    cout<<"Enter the number of elements in the array: ";
+    cin>>n;
+    
+    cout<<"Enter the elements in the array: ";
     int array[n];
-
     for(int i=0; i<n; i++)
     {
         cin>>array[i];
     }
+    
+    cout<<"Enter the element to be searched: ";
+    cin>>element;
     cout<<binarysearch(array, n, element);
     return 0; 
 }
